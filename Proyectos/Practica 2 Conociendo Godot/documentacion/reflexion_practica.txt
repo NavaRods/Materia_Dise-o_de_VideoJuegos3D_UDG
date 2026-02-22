@@ -1,0 +1,7 @@
+REFLEXIÓN PERSONAL - EXPLORACIÓN DE GODOT 4
+
+Durante el desarrollo de esta práctica, he podido observar que la diferencia fundamental entre un nodo y una escena radica en su escala y propósito: el nodo es la pieza funcional mínima, mientras que la escena es un conjunto de nodos configurados para una tarea compleja.
+
+La jerarquía de nodos es el pilar de la organización en Godot. En mi proyecto del Sistema Solar, fue crucial entender que al colocar un planeta como hijo de un nodo Node2D (pivote), la rotación del padre genera automáticamente la órbita del hijo. Sin esta jerarquía, programar el movimiento circular de cada planeta sería mucho más complejo.
+
+Por otro lado, la relación entre el Inspector y el Viewport es de control y visualización: el Inspector permite ajustar valores numéricos precisos que se reflejan visualmente en el Viewport de forma inmediata. Finalmente, la ventaja de crear escenas reutilizables es la eficiencia; al diseñar un solo "Planeta" base, pude crear todo un sistema solar rápidamente, manteniendo la coherencia técnica y permitiendo cambios globales con un solo ajuste en la escena original.

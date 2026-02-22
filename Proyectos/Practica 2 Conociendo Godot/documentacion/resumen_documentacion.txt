@@ -1,0 +1,10 @@
+RESUMEN DE DOCUMENTACIÓN - INTRODUCCIÓN A GODOT 4
+
+Lección 1: Instancias y Escenas
+Las escenas en Godot son paquetes de nodos organizados que pueden guardarse y reutilizarse. La instanciación es el proceso de crear una copia de una escena dentro de otra (como poner un 'Planeta' dentro del 'Sistema Solar'). Esto permite que, si se cambia la escena original, todas las copias se actualicen automáticamente, ahorrando tiempo y evitando errores.
+
+Lección 2: Nodos y el Árbol de Escenas
+Los nodos son los elementos básicos de construcción. Cada nodo tiene una función específica (mostrar una imagen, procesar física, etc.). Se organizan en una jerarquía de "padres e hijos". Es vital entender que las transformaciones aplicadas a un padre (posición, rotación, escala) afectan directamente a todos sus hijos.
+
+Lección 3: Señales (Signals)
+Las señales son el sistema de comunicación entre objetos. Permiten que un nodo envíe un mensaje a otros cuando sucede un evento (por ejemplo, cuando un Timer llega a cero). Esto desacopla el código, permitiendo que los objetos interactúen sin necesidad de estar rígidamente programados entre sí, lo que facilita la organización y limpieza del proyecto.

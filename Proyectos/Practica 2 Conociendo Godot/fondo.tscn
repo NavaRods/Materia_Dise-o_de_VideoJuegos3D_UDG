@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cehtf17qpjt0w"]
+
+[ext_resource type="Texture2D" uid="uid://de5jkobbhamhf" path="res://assets/fondo_espacio.jpg" id="1_1hu1m"]
+
+[node name="fondo" type="Node2D" unique_id=1860129584]
+
+[node name="FondoEspacio" type="Sprite2D" parent="." unique_id=2127172935]
+position = Vector2(573.5, 576)
+scale = Vector2(1.78, 1)
+texture = ExtResource("1_1hu1m")

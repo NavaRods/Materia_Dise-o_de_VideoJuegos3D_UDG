@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://dgo1hrb62uboe"]
+
+[ext_resource type="Script" uid="uid://dielvx4j2rbpy" path="res://planeta.gd" id="1_u18kc"]
+[ext_resource type="PackedScene" uid="uid://cehtf17qpjt0w" path="res://fondo.tscn" id="2_8s37n"]
+[ext_resource type="Texture2D" uid="uid://6mvhyofxw2vl" path="res://assets/sol.png" id="2_v8b6v"]
+[ext_resource type="Texture2D" uid="uid://b1avh1ih2bw5j" path="res://assets/mercurio.png" id="3_8s37n"]
+[ext_resource type="Texture2D" uid="uid://cvf8lg77kenm2" path="res://assets/venus.png" id="4_7qfi4"]
+[ext_resource type="Texture2D" uid="uid://dqentf8uvb5cq" path="res://assets/tierra.png" id="5_c7vpx"]
+[ext_resource type="Texture2D" uid="uid://b8nfd33k062ec" path="res://assets/marte.png" id="6_k1n7g"]
+[ext_resource type="Texture2D" uid="uid://c4ocacmhbftph" path="res://assets/jupiter.png" id="7_1mbx4"]
+[ext_resource type="Texture2D" uid="uid://c00xn0tdj12sh" path="res://assets/saturno.png" id="8_o25lb"]
+[ext_resource type="Texture2D" uid="uid://pogjsvirm5ao" path="res://assets/urano.png" id="9_xxdhm"]
+[ext_resource type="Texture2D" uid="uid://d4lmhbphgbe01" path="res://assets/neptuno.png" id="10_754t4"]
+[ext_resource type="Texture2D" uid="uid://dwml6c7b17c72" path="res://assets/pluton.png" id="11_miypg"]
+
+[node name="planeta" type="Node2D" unique_id=93192234]
+position = Vector2(0, 256)
+script = ExtResource("1_u18kc")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=834566264]
+position = Vector2(580, 322)
+
+[node name="fondo" parent="." unique_id=1860129584 instance=ExtResource("2_8s37n")]
+position = Vector2(0, -256)
+
+[node name="Timer" type="Timer" parent="." unique_id=2061903583]
+wait_time = 0.05
+autostart = true
+
+[node name="Sol" type="Sprite2D" parent="." unique_id=799324478]
+position = Vector2(592.75, 309.25003)
+scale = Vector2(0.03220001, 0.03220001)
+texture = ExtResource("2_v8b6v")
+
+[node name="pivote_mercurio" type="Node2D" parent="." unique_id=1845196646]
+position = Vector2(594, 308)
+
+[node name="Mercurio" type="Sprite2D" parent="pivote_mercurio" unique_id=544872870]
+position = Vector2(-60, -3)
+scale = Vector2(0.32926798, 0.32926798)
+texture = ExtResource("3_8s37n")
+offset = Vector2(-1.7407227, 1.555481)
+region_enabled = true
+region_rect = Rect2(0, 0, 41, 41)
+
+[node name="pivote_venus" type="Node2D" parent="." unique_id=388380221]
+position = Vector2(594, 308)
+
+[node name="Venus" type="Sprite2D" parent="pivote_venus" unique_id=1674162270]
+position = Vector2(-92.99997, -1.9999695)
+scale = Vector2(0.2857143, 0.2857143)
+texture = ExtResource("4_7qfi4")
+region_enabled = true
+region_rect = Rect2(0, 0, 56, 56)
+
+[node name="pivote_tierra" type="Node2D" parent="." unique_id=1678100222]
+position = Vector2(594, 308)
+
+[node name="Tierra" type="Sprite2D" parent="pivote_tierra" unique_id=1270654312]
+position = Vector2(-133, -1.9999695)
+scale = Vector2(0.48360655, 0.48360655)
+texture = ExtResource("5_c7vpx")
+region_enabled = true
+region_rect = Rect2(0, 0, 61, 61)
+
+[node name="pivote_marte" type="Node2D" parent="." unique_id=920870141]
+position = Vector2(594, 308)
+
+[node name="Marte" type="Sprite2D" parent="pivote_marte" unique_id=1106337758]
+position = Vector2(-180, -2)
+scale = Vector2(0.5392157, 0.5392157)
+texture = ExtResource("6_k1n7g")
+region_enabled = true
+region_rect = Rect2(0, 0, 51, 51)
+
+[node name="pivote_jupiter" type="Node2D" parent="." unique_id=243791042]
+position = Vector2(594, 309)
+
+[node name="Jupiter" type="Sprite2D" parent="pivote_jupiter" unique_id=1134991916]
+position = Vector2(-275, -5)
+scale = Vector2(0.69827586, 0.69827586)
+texture = ExtResource("7_1mbx4")
+region_enabled = true
+region_rect = Rect2(0, 0, 117, 116)
+
+[node name="pivote_saturno" type="Node2D" parent="." unique_id=382947071]
+position = Vector2(594, 308)
+
+[node name="Saturno" type="Sprite2D" parent="pivote_saturno" unique_id=425405009]
+position = Vector2(-380, 1)
+scale = Vector2(0.61206895, 0.61206895)
+texture = ExtResource("8_o25lb")
+
+[node name="pivote_urano" type="Node2D" parent="." unique_id=1698550780]
+position = Vector2(594, 308)
+
+[node name="Urano" type="Sprite2D" parent="pivote_urano" unique_id=660829783]
+position = Vector2(-462, -1)
+scale = Vector2(0.5263158, 0.5263158)
+texture = ExtResource("9_xxdhm")
+region_enabled = true
+region_rect = Rect2(0, 0, 76, 76)
+
+[node name="pivote_neptuno" type="Node2D" parent="." unique_id=944609950]
+position = Vector2(594, 308)
+
+[node name="Neptuno" type="Sprite2D" parent="pivote_neptuno" unique_id=1894329550]
+position = Vector2(-517, -1.9999695)
+scale = Vector2(0.47368422, 0.47368422)
+texture = ExtResource("10_754t4")
+region_enabled = true
+region_rect = Rect2(0, 0, 76, 76)
+
+[node name="pivote_pluton" type="Node2D" parent="." unique_id=321476874]
+position = Vector2(594, 308)
+
+[node name="Pluton" type="Sprite2D" parent="pivote_pluton" unique_id=1244926033]
+position = Vector2(-562, 0)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("11_miypg")
+region_enabled = true
+region_rect = Rect2(4, 0, 25, 26)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
