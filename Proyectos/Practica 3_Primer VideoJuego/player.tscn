@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://d1lths6cgu0tm"]
+
+[ext_resource type="Texture2D" uid="uid://bdyfn6u34xhy1" path="res://art/playerGrey_up2.png" id="1_hqtel"]
+[ext_resource type="Script" uid="uid://ru58u0rus40a" path="res://player.gd" id="1_sweqy"]
+[ext_resource type="Texture2D" uid="uid://cqmy1ji5smuf6" path="res://art/playerGrey_up1.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://s1cm0v0vx7s7" path="res://art/playerGrey_walk1.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://bvv2ohef7ov8g" path="res://art/playerGrey_walk2.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://dwn4mstvm1i42" path="res://assets/powerups/shield_actived.png" id="6_2hs0m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hqtel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sweqy")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2hs0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1jxqw")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2hs0m"]
+radius = 42.0
+height = 100.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sweqy"]
+
+[node name="Player" type="Area2D" unique_id=1426854690]
+position = Vector2(234, 393)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_sweqy")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=868679169]
+position = Vector2(0, -4)
+sprite_frames = SubResource("SpriteFrames_dw050")
+animation = &"up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1850888674]
+position = Vector2(2, -10)
+shape = SubResource("CapsuleShape2D_2hs0m")
+
+[node name="Mod" type="RigidBody2D" parent="." unique_id=742070014]
+visible = false
+collision_mask = 0
+gravity_scale = 0.0
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mod" unique_id=1732134981]
+sprite_frames = SubResource("SpriteFrames_sweqy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mod" unique_id=207092988]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Mod" unique_id=2100446438]
+
+[node name="ShieldVisual" type="Sprite2D" parent="." unique_id=936348292]
+position = Vector2(4, -2)
+scale = Vector2(6, 6)
+texture = ExtResource("6_2hs0m")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
